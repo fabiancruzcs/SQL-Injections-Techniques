@@ -1,4 +1,4 @@
-<h1>Error-based SQLi</h1> 
+<h1>In-band Error-based SQL Injection (Classic SQLi)</h1> 
 
 
 <h2>Description</h2>
