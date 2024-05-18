@@ -10,7 +10,7 @@ This lab focused on SQL injection vulnerabilities in the "AltoroMutual" demo sit
 
 During the lab's initial phase, I examined the website's security setup systematically. By entering `admin'` as the username in the login interface, I triggered a syntax error, revealing a Classic SQL injection vulnerability. Realizing the risk, I used a simple SQL injection technique by entering `admin' --` as the username. This effectively bypassed the password check by commenting out parts of the query. I then experimented with another technique, entering `admin' OR '1'='1` as the username. This tricked the system into authenticating me as "<b>True</b>" irrespective of the password input, granting unauthorized access to the admin account.
 
-<img src="https://imgur.com/v4fwGDV.png" height="80%" width="80%" alt="Classic-SQLi-Lab"/>
+<img src="https://imgur.com/v4fwGDV.png" height="80%" width="100%" alt="Classic-SQLi-Lab"/>
 
 During this lab, working with SQL injection techniques helped me understand how web applications can be vulnerable. I learned how important it is to have strong security measures in place and to follow secure coding practices. By seeing the risks that come with vulnerable web apps, I gained a better understanding of cybersecurity concepts and how to respond to incidents. This experience deepened my knowledge of cybersecurity and improved my ability to protect digital assets from threats.
 
