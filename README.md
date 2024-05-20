@@ -8,8 +8,14 @@ This lab focuses on SQL injection vulnerabilities in the "AltoroMutual" demo sit
 
 <h2>Thought Process</h2>
 
-During the lab's initial phase, I examined the website's security setup systematically. By entering `admin'` as the username in the login interface, I triggered a syntax error, revealing a Classic SQL injection vulnerability. Realizing the risk, I used a simple SQL injection technique by entering `admin' --` as the username. This effectively bypassed the password check by commenting out parts of the query. I then experimented with another technique, entering `admin' OR '1'='1` as the username. This tricked the system into authenticating me as "<b>True</b>" irrespective of the password input, granting unauthorized access to the admin account.
+During the lab's initial phase, I examined the website's security setup systematically. By entering `admin'` as the username in the login interface, I triggered a syntax error, revealing a vulnerability prone to an SQL injection attack. Realizing the unsafe code, I injected a simple SQL payload via the username into the database by entering `admin' --` as the username. This effectively bypassed the password check by commenting out the authentication part of the query related to the password. I then experimented with another technique, entering `admin' OR '1'='1` as the username, I tricked the system into authenticating me as "<b>True</b>". This happened because I met the criteria needed to be granted access to the account which had to do with the following:
 
+Conditional A: The username has to be equal to "admin" (✅True)</br>
+Conditional B: `OR` the value of 1 has to be equal to 1 (✅True)</br>
+Conditional C: `AND` the password value has to be equal to " (❌N/A)</br>
+
+<p align="center">
+Behind the scenes:
 <img src="https://imgur.com/v4fwGDV.png" height="80%" width="100%" alt="Classic-SQLi-Lab"/>
 
 During this lab, working with SQL injection techniques helped me understand how web applications can be vulnerable. I learned how important it is to have strong security measures in place and to follow secure coding practices. By seeing the risks that come with vulnerable web apps, I gained a better understanding of cybersecurity concepts and how to respond to incidents. This experience deepened my knowledge of cybersecurity and improved my ability to protect digital assets from threats.
@@ -24,7 +30,7 @@ During this lab, working with SQL injection techniques helped me understand how 
 <h2>Exploit Walk-Through:</h2>
 
 <p align="center">
-Login failure, typed  typed <b> admin </b> as common username: <br/>
+Login failure, typed <b> admin </b> as common username: <br/>
 <img src="https://imgur.com/BlGWiwp.png" height="80%" width="80%" alt="Classic-SQLi-Lab"/>
 <br />
 <br />
