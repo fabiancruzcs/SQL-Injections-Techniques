@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-This lab focused on SQL injection vulnerabilities in the "AltoroMutual" demo site. By exploiting these vulnerabilities, particularly in the login functionality, I gained unauthorized access to the admin account without needing a password. Through this hands-on experience, I learned about cybersecurity risks associated with insecure web applications and the importance of secure coding practices.
+This lab focuses on SQL injection vulnerabilities in the "AltoroMutual" demo site. By exploiting these vulnerabilities, particularly in the login functionality, I gained unauthorized access to the admin account without needing a password. Through this hands-on experience, I learned about cybersecurity risks associated with insecure web applications and the importance of secure coding practices.
 <br />
 
 
