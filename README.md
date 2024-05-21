@@ -10,9 +10,9 @@ This lab focuses on SQL injection vulnerabilities in the "AltoroMutual" demo sit
 
 During the lab's initial phase, I examined the website's security setup systematically. By entering `admin'` as the username in the login interface, I triggered a syntax error, revealing a vulnerability prone to an SQL injection attack. Recognizing the unsafe code, I injected a simple SQL payload into the database by entering `admin' --` as the username. This effectively bypassed the password check by commenting out the authentication part of the query related to the password. I then experimented with another technique, entering `admin' OR '1'='1` as the username, I tricked the system into authenticating me as "<b>True</b>". This happened because I met the criteria needed to be granted access to the account which had to do with the following:
 
-Conditional A: The username inputted value has to match the one on the database end (✅True)</br>
+Conditional A: The inputted username must match the one in the database (✅True)</br>
 Conditional B: `OR` the value of 1 has to be equal to 1 (✅True)</br>
-Conditional C: `AND` the password inputted value has to match the one on the database end (❌N/A)</br>
+Conditional C: `AND` the inputted password must match the one in the database  (❌N/A)</br>
 
 <p align="center">
 Behind the scenes:
