@@ -23,8 +23,10 @@ During this lab, working with SQL injection techniques helped me understand how 
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>SQL</b> 
-- <b>https://altoro.testfire.net/</b> (demo site)
+| Used          | Description                                     |
+|---------------|-------------------------------------------------|
+| SQL           | Language for managing relational databases.     |
+| [https://altoro.testfire.net/](https://altoro.testfire.net/) | Demo site for testing web security.             |
 
 
 <h2>Exploit Walk-Through:</h2>
