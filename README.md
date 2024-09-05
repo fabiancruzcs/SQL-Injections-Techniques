@@ -1,25 +1,10 @@
-<h1>In-band Error-based SQL Injection (Classic SQLi)</h1> 
+<h1>SQL Injection Techniques</h1> 
 
-
-<h2>Description</h2>
 This lab focuses on SQL injection vulnerabilities in the "AltoroMutual" demo site. By exploiting these vulnerabilities, particularly in the login functionality, I gained unauthorized access to the admin account without needing a password. Through this hands-on experience, I learned about cybersecurity risks associated with insecure web applications and the importance of secure coding practices.
-<br />
 
-
-<h2>Thought Process</h2>
-
-During the lab's initial phase, I examined the website's security setup systematically. By entering `admin'` as the username in the login interface, I triggered a syntax error, revealing a vulnerability prone to an SQL injection attack. Recognizing the unsafe code, I injected a simple SQL payload into the database by entering `admin' --` as the username. This effectively bypassed the password check by commenting out parts of the query. I then experimented with another technique, entering `admin' OR '1'='1` as the username, I tricked the system into authenticating me as "<b>True</b>". This happened because I met the criteria needed to be granted access to the account which had to do with the following:
-
-Conditional A: The inputted username must match the one in the database (✅True)</br>
-Conditional B: `OR` the value of 1 has to be equal to 1 (✅True)</br>
-Conditional C: `AND` the inputted password must match the one in the database  (❌N/A)</br>
-
-<p align="center">
-Behind the scenes:
-<img src="https://imgur.com/v4fwGDV.png" height="80%" width="100%" alt="Classic-SQLi-Lab"/>
-
-During this lab, working with SQL injection techniques helped me understand how web applications can be vulnerable. I learned how important it is to have strong security measures in place and to follow secure coding practices. By seeing the risks that come with vulnerable web apps, I gained a better understanding of cybersecurity concepts and how to respond to incidents. This experience deepened my knowledge of cybersecurity and improved my ability to protect digital assets from threats.
-
+### Contents
+- <a href="https://github.com/fabiancruzcs/CTF-Writeups/tree/main/NahamCon-CTF-2024">In-band Error-based SQL Injection (Classic SQLi)</a> </br>
+- <a href="https://github.com/fabiancruzcs/CTF-Writeups/tree/main/NahamCon-CTF-2024/Warmups">In-band Union-based SQL Injection (Classic SQLi) (To be added)</a> </br>
 
 <h2>Languages and Utilities Used</h2>
 
@@ -28,6 +13,23 @@ During this lab, working with SQL injection techniques helped me understand how 
 | SQL           | Language for managing relational databases.     |
 | [https://altoro.testfire.net/](https://altoro.testfire.net/) | Demo site for testing web security.             |
 
+<h2>Thought Process</h2>
+
+In the first part of the lab, I checked how the website handles security. I tested it by using admin' as the username on the login page. This caused a syntax error, showing that the site might be vulnerable to SQL injection attacks.
+
+Next, I tried a basic SQL injection by entering `admin' --` as the username. The `--` part comments out the rest of the SQL query, letting me bypass the password check.
+
+Then, I tested another technique with `admin' OR '1'='1`. This tricked the system into thinking the condition was always true, so it logged me in. Here’s why this worked:
+
+Condition A: The username `admin` exists in the database (✅True) </br>
+Condition B: `'1'='1` is always true (✅True) </br>
+Condition C: The password doesn’t need to be checked (❌N/A) </br>
+
+So, by meeting the first two conditions, I was able to gain access without needing a valid password. </br>
+
+<p align="center">
+Behind the scenes:
+<img src="https://imgur.com/v4fwGDV.png" height="80%" width="100%" alt="Classic-SQLi-Lab"/>
 
 <h2>Exploit Walk-Through:</h2>
 
