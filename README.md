@@ -4,7 +4,7 @@ This lab focuses on SQL injection vulnerabilities in the "AltoroMutual" demo sit
 
 ### Contents
 - <a href="https://github.com/fabiancruzcs/SQL-Injections-Techniques/blob/main/README.md#in-band-error-based-sql-injection-classic-sqli---thought-process">In-band Error-based SQL Injection (Classic SQLi)</a> </br>
-- <a href="https://github.com/fabiancruzcs/CTF-Writeups/tree/main/NahamCon-CTF-2024/Warmups">In-band Union-based SQL Injection (Classic SQLi) (To be added)</a> </br>
+- In-band Union-based SQL Injection (Classic SQLi) - To be added
 
 <h2>Languages and Utilities Used</h2>
 
