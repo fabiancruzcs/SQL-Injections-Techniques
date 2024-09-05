@@ -3,7 +3,7 @@
 This lab focuses on SQL injection vulnerabilities in the "AltoroMutual" demo site. By exploiting these vulnerabilities, particularly in the login functionality, I gained unauthorized access to the admin account without needing a password. Through this hands-on experience, I learned about cybersecurity risks associated with insecure web applications and the importance of secure coding practices.
 
 ### Contents
-- <a href="https://github.com/fabiancruzcs/CTF-Writeups/tree/main/NahamCon-CTF-2024">In-band Error-based SQL Injection (Classic SQLi)</a> </br>
+- <a href="https://github.com/fabiancruzcs/SQL-Injections-Techniques/edit/main/README.md#in-band-error-based-sql-injection-classic-sqli---thought-process">In-band Error-based SQL Injection (Classic SQLi)</a> </br>
 - <a href="https://github.com/fabiancruzcs/CTF-Writeups/tree/main/NahamCon-CTF-2024/Warmups">In-band Union-based SQL Injection (Classic SQLi) (To be added)</a> </br>
 
 <h2>Languages and Utilities Used</h2>
@@ -13,7 +13,7 @@ This lab focuses on SQL injection vulnerabilities in the "AltoroMutual" demo sit
 | SQL           | Language for managing relational databases.     |
 | [https://altoro.testfire.net/](https://altoro.testfire.net/) | Demo site for testing web security.             |
 
-<h2>Thought Process</h2>
+## In-band Error-based SQL Injection (Classic SQLi) - Thought Process
 
 In the first part of the lab, I checked how the website handles security. I tested it by using admin' as the username on the login page. This caused a syntax error, showing that the site might be vulnerable to SQL injection attacks.
 
