@@ -29,28 +29,34 @@ So, by meeting the first two conditions, I was able to gain access without needi
 
 <p align="center">
 Behind the scenes:
+<p align="center">
 <img src="https://imgur.com/v4fwGDV.png" height="80%" width="100%" alt="Classic-SQLi-Lab"/>
 
 <h2>Exploit Walk-Through:</h2>
 
 <p align="center">
-Login failure, typed <b> admin </b> as common username: <br/>
+Login failure, typed <b>admin</b> as common username: <br/>
+<p align="center">
 <img src="https://imgur.com/BlGWiwp.png" height="80%" width="80%" alt="Classic-SQLi-Lab"/>
 <br />
 <br />
 Testing login functionality with username <b>admin'</b>. Returned syntax error indicating a potential vulnerability:  <br/>
+<p align="center">
 <img src="https://imgur.com/fF7oEnI.png" height="80%" width="80%" alt="Classic-SQLi-Lab"/>
 <br />
 <br />
 Simple SQLi payload <b>admin' --</b>: <br/>
+<p align="center">
 <img src="https://imgur.com/XbBdljF.png" height="80%" width="80%" alt="Classic-SQLi-Lab"/>
 <br />
 <br />
 Payload variation <b>admin' OR '1'='1</b>:  <br/>
+<p align="center">
 <img src="https://imgur.com/vqooZnT.png" height="80%" width="80%" alt="Classic-SQLi-Lab"/>
 <br />
 <br />
 Access granted:  <br/>
+<p align="center">
 <img src="https://imgur.com/7NXhuiH.png" height="80%" width="80%" alt="Classic-SQLi-Lab"/>
 <br />
 <br />
